@@ -20,7 +20,6 @@ Analize și grafice agregate despre arsură — versiune public-safe.
 * [Cataloage incluse (public-safe)](#cataloage-incluse-public-safe)
 * [Exemple de rezultate](#exemple-de-rezultate)
 * [Confidențialitate](#confidențialitate)
-* [Stack & licență](#stack--licență)
 
 ---
 
