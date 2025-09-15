@@ -16,7 +16,6 @@ Analize și grafice agregate despre arsură — versiune public-safe.
 ## Cuprins
 
 * [Pipeline (pe scurt)](#pipeline-pe-scurt)
-* [Cum rulezi](#cum-rulezi)
 * [Structură proiect](#structură-proiect)
 * [Cataloage incluse (public-safe)](#cataloage-incluse-public-safe)
 * [Exemple de rezultate](#exemple-de-rezultate)
@@ -43,7 +42,7 @@ Analize și grafice agregate despre arsură — versiune public-safe.
    Un rând/pacient: **durata spitalizării**, codificări (SEX, MEDIU, STATUS), rezumate analize.
 
 5. **Pivoți public-safe** — `pas3_pivot_lot.py`, `pivot_arsuri.py`, `grafic_pivot.py`
-   Nr. pacienți & durate medii; **celulele cu n<5 sunt mascate** → `pivot_arsuri_lot_public.xlsx`.
+   Nr. pacienți & durate medii;
 
 6. **Vizualizări & QA** — `violinplot_durata_pe_cauza.py`, `boxplot_durata_pe_cauza.py`, `grafic_arsuri.py`, `grafic_diagnostic.py`, `statistici_pacienti.py`, `verif_outlieri.py`
    PNG/SVG agregate (fără PII).
@@ -51,42 +50,6 @@ Analize și grafice agregate despre arsură — versiune public-safe.
 7. **Orchestrare** — `run_pipeline.py`
    `--public` folosește strict fișierele incluse în repo; pentru date reale se folosesc surse locale prin variabile de mediu.
 
----
-
-## Cum rulezi
-
-### 1) Mediu
-
-```bash
-# Windows
-python -m venv .venv && .venv\Scripts\activate
-# macOS / Linux
-python3 -m venv .venv && source .venv/bin/activate
-
-pip install -r requirements.txt  # (pandas, numpy, matplotlib, seaborn, openpyxl)
-```
-
-### 2) Mod public (regenerare grafice din pivoți public-safe)
-
-```bash
-python grafic_pivot.py
-python violinplot_durata_pe_cauza.py
-python boxplot_durata_pe_cauza.py
-```
-
-### 3) Mod privat (cu date locale, nepublice)
-
-```bash
-# Exemplu: setează calea către surse locale (necomise în git)
-# Windows:
-set SRC=private/PACIENTI_LOCAL.xlsx
-# macOS / Linux:
-export SRC=private/PACIENTI_LOCAL.xlsx
-
-python run_pipeline.py
-```
-
-> Notă: editările de cale/argumente se fac la începutul scripturilor, dacă vrei rute personalizate.
 
 ---
 
@@ -124,12 +87,9 @@ python run_pipeline.py
 
 | Fișier                                       | Conținut                          | Public-safe |
 | -------------------------------------------- | --------------------------------- | ----------- |
-| `diagnostice_principale_unice_public.xlsx`   | listă coduri/denumiri diagnostice | ✅           |
-| `interventii_chirurgicale_unice_public.xlsx` | listă intervenții                 | ✅           |
-| `pivot_arsuri_lot_public.xlsx`               | pivoți cu **n<5** mascat          | ✅           |
+| `diagnostice_principale_unice.xlsx`          | listă coduri/denumiri diagnostice | ✅           |
+| `interventii_chirurgicale_unice.xlsx`        | listă intervenții                 | ✅           |
 | `analize_distincte.xlsx`                     | listă denumiri analize            | ✅           |
-| `diagnostice_principale_unice.xlsx`          | listă diagnostice (fără PII)      | ✅           |
-| `interventii_chirurgicale_unice.xlsx`        | listă intervenții (fără PII)      | ✅           |
 
 > Toate celelalte `.xlsx` brute/derivate rămân private (ignorate prin `.gitignore`).
 
@@ -151,13 +111,10 @@ python run_pipeline.py
 ## Confidențialitate
 
 * Repo-ul **nu** conține date la nivel de pacient, PII sau date calendaristice reale.
-* Pivoții publici aplică **small-cell suppression** (n<5).
-* Date reale se folosesc doar local în `private/`/`data/` și **nu** se comit.
 
 Checklist intern:
 
 * [x] `.gitignore` blochează datele brute
-* [x] Doar cataloagele whitelisted sunt incluse
 * [x] Graficele sunt agregate și nu expun PII
 
 ---
@@ -165,6 +122,6 @@ Checklist intern:
 ## Stack & licență
 
 **Stack:** Python · pandas · numpy · matplotlib · seaborn · openpyxl
-**Licență:** MIT (poți ajusta după preferință)
+**Licență:** MIT
 
 ---
