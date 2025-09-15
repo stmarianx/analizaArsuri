@@ -9,7 +9,7 @@ Analize și grafice agregate despre arsură — versiune public-safe.
 ![Privacy](https://img.shields.io/badge/privacy-no%20patient--level%20data-brightgreen)
 ![License](https://img.shields.io/badge/license-MIT-lightgrey)
 
-**RO:** Proiect (\~1 lună) cu pipeline end-to-end pentru analiza pacienților cu arsuri: curățare, extragere variabile (cauză, TBSA), calcul **ABSI**, pivoți și vizualizări. Repo-ul include **doar cod, grafice agregate și cataloage public-safe** (fără date la nivel de pacient).
+Proiect (\~1 lună) cu pipeline end-to-end pentru analiza pacienților cu arsuri: curățare, extragere variabile (cauză, TBSA), calcul **ABSI**, pivoți și vizualizări. Repo-ul include **doar cod, grafice agregate și cataloage public-safe** (fără date la nivel de pacient).
 
 ---
 
