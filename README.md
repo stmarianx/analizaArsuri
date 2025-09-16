@@ -56,28 +56,11 @@ Proiect (\~1 lună) cu pipeline end-to-end pentru analiza pacienților cu arsuri
 
 ```
 .
-├── main.py
-├── run_pipeline.py
-├── pas2_prepare_master.py
-├── pas3_pivot_lot.py
-├── analize_pe_zi.py
-├── build_baza_pacienti_finala.py
-├── procente_arsura.py
-├── scor_ABSI.py
-├── pivot_arsuri.py
-├── grafic_pivot.py
-├── violinplot_durata_pe_cauza.py
-├── boxplot_durata_pe_cauza.py
-├── verif_outlieri.py
-├── cauze_arsuri.py
-├── extracta_lista_coduri.py
-├── grafic_arsuri.py
-├── grafic_diagnostic.py
-├── analize_lista.py
-├── baza_date.py
-├── baza_date_finala.py
-├── statistici_pacienti.py
-└── grafice/ *.png *.svg (exporturi agregate)
+├── scripts/     # tot codul (entry points + module single-file)
+├── catalogs/    # liste derivate (analize/diagnostice/intervenții, publicate)
+├── charts/      # grafice PNG/SVG (agregate, public-safe)
+├── README.md
+├── .gitignore
 ```
 
 ---
