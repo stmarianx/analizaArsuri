@@ -79,14 +79,7 @@ Proiect (\~1 lună) cu pipeline end-to-end pentru analiza pacienților cu arsuri
 
 ## Exemple de rezultate
 
-<p align="center">
-  <img src="boxplot_durata_pe_cauza.png" alt="Boxplot durată pe cauză" width="45%"/>
-  <img src="violinplot_durata_pe_cauza.png" alt="Violinplot durată pe cauză" width="45%"/>
-</p>
-<p align="center">
-  <img src="grafic_pivot_arsuri.png" alt="Heatmap pivot" width="45%"/>
-  <img src="durata_spitalizare.png" alt="Distribuție durată spitalizare" width="45%"/>
-</p>
+<p align="center"> <img src="charts/boxplot_durata_pe_cauza.png" alt="Boxplot durată pe cauză" width="45%"/> <img src="charts/violinplot_durata_pe_cauza.png" alt="Violinplot durată pe cauză" width="45%"/> </p> <p align="center"> <img src="charts/grafic_pivot_arsuri.png" alt="Heatmap pivot" width="45%"/> <img src="charts/durata_spitalizare.png" alt="Distribuție durată spitalizare" width="45%"/> </p>
 
 ---
 
